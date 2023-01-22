@@ -1,0 +1,62 @@
+@use "../../variables";
+
+*p {
+  color: white;
+
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 56px;
+
+  background: black;
+
+  @media screen and (max-width: variables.$breakpoint-mobile) {
+    &__hamburger {
+      display: block;
+      background-color: black;
+      border: 0px;
+      margin-right: 16px;
+    }
+
+    &__menu {
+      display: none;
+
+      &--expanded {
+        display: block;
+        flex-direction: column;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        z-index: 4;
+      }
+    }
+
+    &__item {
+      margin: 48px 39px 48px 39px;
+    }
+  }
+
+  @media screen and (min-width: variables.$breakpoint-mobile) {
+    &__menu {
+      display: inline-flex;
+    }
+
+    &__item {
+      margin: 0px 24px 0px 24px;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+  }
+}

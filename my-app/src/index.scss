@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets//fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+html {
+  background: url(assets/images/contentbackground.png) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.disable-link-style {
+  text-decoration: none;
+}
